@@ -10,11 +10,8 @@ namespace Assets.Scripts
 {
     class Dog: AnimalBase
     {
-        private GameObject prefabOfDog;
-
         void Start()
         {
-            prefabOfDog = GameObject.FindGameObjectWithTag("cow");
             controllAnimal = new Controll();
         }
 
@@ -27,7 +24,7 @@ namespace Assets.Scripts
         {
             for (int j = 0; j < _count; j++)
             {
-                GameObject dog = (GameObject)Instantiate(_prefab, new Vector2(UnityEngine.Random.Range(-6f, 6f), UnityEngine.Random.Range(-3.5f, 3.5f)), Quaternion.identity);
+                GameObject dog = (GameObject)Instantiate(_prefab, new Vector2(UnityEngine.Random.Range(2f, 6f), UnityEngine.Random.Range(0, 3.5f)), Quaternion.identity);
                 dog.AddComponent<DogControll>();
             }
         }

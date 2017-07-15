@@ -8,5 +8,10 @@ namespace Assets.Scripts.ScriptForAnimals
 {
     class CowControll:MonoBehaviour
     {
+
+        void OnMouseDown()
+        {
+            Debug.Log("inst");
+        }
     }
 }

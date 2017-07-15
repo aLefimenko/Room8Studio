@@ -17,7 +17,7 @@ namespace Assets.Scripts.Start
         private Cow cowComponent;
         private Dog dogComponent;
 
-        void Start()
+        void Awake()
         {
             gameObject.AddComponent<Cow>();
             gameObject.AddComponent<Dog>();

@@ -1,13 +1,11 @@
-﻿using Assets.Scripts.Controlled_animals;
-using Assets.Scripts.ScriptForAnimals;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
+
     class Cow: AnimalBase
     {
 
@@ -31,4 +29,4 @@ namespace Assets.Scripts
             }
         }
     }
-}
+

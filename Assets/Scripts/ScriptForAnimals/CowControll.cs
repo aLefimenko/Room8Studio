@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ScriptForAnimals
-{
-    class CowControll:MonoBehaviour
-    {
 
-        void OnMouseDown()
-        {
-            Debug.Log("inst");
-        }
+class CowControll:MonoBehaviour
+{
+    void OnMouseDown()
+    {
+        Debug.Log("yeah");
     }
+   
 }
+

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Scripts.Animals
+namespace Assets.Scripts.Controlled_animals
 {
-    class AnimalsBase
+    public interface IControllable
     {
+        bool Controll();
     }
 }

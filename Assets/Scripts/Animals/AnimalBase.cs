@@ -3,23 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public abstract class AnimalBase
+    public abstract class AnimalBase: MonoBehaviour
     {
         protected IControllable controllAnimal;
-        int countAnimals;
 
-        public AnimalBase()
-        {
+        void Start() { 
             controllAnimal = new UnControll();
-            countAnimals = 10;
         }
 
-        public virtual bool Controll()
-        {
-            return controllAnimal.Controll();
-        }
+        public abstract bool Controll();
+        public abstract void InstaitiateAnimals(GameObject prefab, int count);
     }
 }

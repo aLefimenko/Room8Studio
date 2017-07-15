@@ -22,7 +22,7 @@ using UnityEngine;
         {
             for (int j = 0; j < _count; j++)
             {
-                GameObject dog = (GameObject)Instantiate(_prefab, new Vector2(UnityEngine.Random.Range(2f, 6f), UnityEngine.Random.Range(0, 3.5f)), Quaternion.identity);
+                GameObject dog = (GameObject)Instantiate(_prefab, new Vector3(UnityEngine.Random.Range(2f, 6f), UnityEngine.Random.Range(0, 3.5f), _prefab.transform.position.z), Quaternion.identity);
                 dog.AddComponent<DogControll>();
             }
         }

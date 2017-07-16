@@ -25,8 +25,6 @@ namespace Assets.Scripts.Start
             dogComponent = gameObject.GetComponent<Dog>();
             cowComponent.InstaitiateAnimals(prefabOfCows, CountsCows);
             dogComponent.InstaitiateAnimals(prefabOfDogs, CountsDogs);
-        }
-        
-        
+        } 
     }
 }

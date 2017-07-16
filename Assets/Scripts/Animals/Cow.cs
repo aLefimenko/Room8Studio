@@ -28,5 +28,7 @@ using UnityEngine;
                 cow.AddComponent<CowControll>();
             }
         }
+
+  
     }
 

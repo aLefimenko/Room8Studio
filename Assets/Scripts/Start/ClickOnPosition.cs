@@ -24,14 +24,10 @@ public class ClickOnPosition : MonoBehaviour {
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         clickPOsition = new Vector2(ray.origin.x,ray.origin.y);
-        Debug.Log(clickPOsition.ToString());
+       // Debug.Log(clickPOsition.ToString());
     }
 
-    /*IEnumerator OnStartedInstatiate()
-    {
-        yield return new WaitForSeconds(0.5f);
-        dogs.AddRange(GameObject.FindGameObjectsWithTag("dog"));
-    }*/
+
 
     void MoveToClick()
     {
@@ -39,8 +35,15 @@ public class ClickOnPosition : MonoBehaviour {
         {
             if(gameDog.GetComponent<SpriteRenderer>().color == Color.red)
             {
-                gameDog.gameObject.transform.position = Vector3.Lerp(gameDog.transform.position, new Vector3(clickPOsition.x, clickPOsition.y, gameDog.transform.position.z), 2f*Time.deltaTime);
+                
+                gameDog.gameObject.transform.position = Vector3.MoveTowards(gameDog.transform.position, new Vector3(clickPOsition.x, clickPOsition.y, gameDog.transform.position.z), 2f * Time.deltaTime);
             }
+            if(gameDog.transform.position.x==clickPOsition.x&&gameDog.transform.position.y==clickPOsition.y)
+            {
+                clickPOsition = Vector2.zero;
+                gameDog.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+            
         }
     }
 }
